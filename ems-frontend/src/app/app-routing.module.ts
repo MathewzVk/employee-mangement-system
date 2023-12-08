@@ -2,11 +2,15 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
+import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 
 const routes: Routes = [
   {path: "employees", component: EmployeeListComponent},
   {path: "", redirectTo: "employees", pathMatch: "full"},
-  {path: "new", component: AddEmployeeComponent}
+  {path: "new", component: AddEmployeeComponent},
+  {path: "update/:id", component: UpdateEmployeeComponent},
+  {path: "details/:id", component: EmployeeDetailsComponent}
 ];
 
 @NgModule({
